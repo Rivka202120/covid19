@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    display: grid;
+    grid-template-rows: 35vh 65vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'gc gd'
+    'bc  bc';
+}
+.global-cases, .global-deaths{
+    display: grid;
+    grid-template-rows: 20% auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'ttl ttl'
+    'dal  totl';
+    background-color:rgba(235, 235, 235, 0.884) ;
+    margin: 20px;
+    /* position: sticky;
+    position: -webkit-sticky;
+    top: 0; */
+}
+.global-cases{
+   grid-area: gc;
+   margin-right: 10px;
+}
+.global-deaths{
+grid-area: gd;
+margin-left: 10px;
+}
+.by-country{
+grid-area: bc;
+}
+.title{
+  grid-area: ttl;
+  text-align: center;
+}
+.total{
+    grid-area: totl;
+}
+.daily{
+    grid-area: dal;
+}
+h1, h2, p{
+    padding: 7px 15px;
+}
+table{
+    padding: 25px;
+    width: 100vw;
+    text-align: left;
+    border-spacing: 0;
+}
+th{
+    padding-bottom: 7px;
+    font-size: large;
+}
+td{
+    padding: 7px 5px;
+}
+tbody:nth-child(odd){
+  background-color: white;
+}
+tbody:nth-child(even){
+    background-color:rgba(235, 235, 235, 0.884) ;
+  }
+  tbody:hover{
+  background-color:rgba(100, 100, 100, 0.884) ;
+  }
+  .by-country > input{
+      margin: 0 25px;
+      width: calc(100% - 50px);
+      padding: 5px;
+      font-size: medium;
+  }
